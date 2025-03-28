@@ -1,0 +1,36 @@
+﻿using System;  
+using System.Drawing;  
+using System.Windows.Forms;  
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    Application.Run(new MyForm());
+  }
+}
+
+public class MyForm : Form  
+{  
+	[Variables]
+	
+    public MyForm()  
+    {  
+	
+	[Setup]
+	
+	Timer timer = new Timer();
+	timer.Tick += Tick;
+	timer.Start();
+	
+	[Content]
+	
+    }
+
+    private void Tick(object sender, EventArgs e)
+    {
+		[Tick]
+    }
+
+    [Events]
+}
